@@ -11,6 +11,7 @@
 				<!-- Bootstrap -->
 		<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
 		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/blog.css' %}" rel="stylesheet">
 	</head>
 
     <!-- NAVBAR
@@ -24,27 +25,19 @@
 						<div class="navbar-header">
 							<a class="navbar-brand" href="#"></a>
 						</div>
-						<div class="container">
-							<ul class="nav navbar-nav">
-							<!-- Вариант для проверялки -->
-							<li class="{% block index_is_active %}{% endblock index_is_active %}">
-							<a href="{% url 'index' %}">Main</a></li>
-							
-{% comment %}		<!-- Оригинал -->
-		<!--<li class="active"><a class="top_bar" href="{% url 'index' %}">Main</a></li>
-		<li><a class="top_bar" href="{% url 'contact' %}">Contacts</a></li>
-		<li><a class="top_bar" href="{% url 'students:list_view' %}">Students</a></li>
-		<li><a class="top_bar" href="{% url 'calculate' %}">Equation</a></li>-->
-{% endcomment %}
-							</ul>
-						</div>
+						
 					</div>
 				</nav>
 			</div>
 		</div>
 
     {% block content %}{% endblock content %}
-
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="#">my :)</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
